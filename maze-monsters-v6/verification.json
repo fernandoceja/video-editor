@@ -1,0 +1,23 @@
+{
+  "output": "/workspace/video-editor/maze-monsters-v6/maze-monsters-v6-caption-fix.mp4",
+  "checks": {
+    "1080x1920": true,
+    "30fps": true,
+    "1066frames": true,
+    "stereo_aac_48khz": true,
+    "audio_packets_identical_to_v5": true,
+    "clean_decode": true,
+    "single_caption_layer_all_frames": true,
+    "uploaded_original_unchanged": true,
+    "v3_unchanged": true,
+    "v4_unchanged": true,
+    "v5_unchanged": true
+  },
+  "passed": true,
+  "duration": "35.533333",
+  "audio": "Bit-identical v5 AAC packets, no processing",
+  "inherited_loudness_lufs": -14.28,
+  "inherited_true_peak_dbtp": -1.26,
+  "decode_errors": "",
+  "paid_actions": false
+}

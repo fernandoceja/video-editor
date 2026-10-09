@@ -1,0 +1,183 @@
+{
+  "captions": [
+    {
+      "start": 0.0,
+      "end": 3.4,
+      "text": "We thought the corn maze\nwas scary..."
+    },
+    {
+      "start": 3.5,
+      "end": 6.5,
+      "text": "WE SHOULD HAVE\nTURNED BACK"
+    },
+    {
+      "start": 6.5,
+      "end": 10.8,
+      "text": "THEN THIS GUY\nSHOWED UP"
+    },
+    {
+      "start": 11.0,
+      "end": 14.8,
+      "text": "PICK YOUR NIGHTMARE"
+    },
+    {
+      "start": 15.0,
+      "end": 18.8,
+      "text": "KEEP WALKING.\nKEEP WALKING."
+    },
+    {
+      "start": 19.0,
+      "end": 22.8,
+      "text": "WHY IS IT SO TALL?"
+    },
+    {
+      "start": 24.8,
+      "end": 26.35,
+      "text": "WAIT\u2026 WHAT'S\nIN HIS HAND?"
+    },
+    {
+      "start": 26.4,
+      "end": 27.8,
+      "text": "A CANDY COCKROACH."
+    },
+    {
+      "start": 28.0,
+      "end": 32.5,
+      "text": "JUST ACT NORMAL"
+    },
+    {
+      "start": 32.6,
+      "end": 34.75,
+      "text": "NOPE."
+    },
+    {
+      "start": 34.8,
+      "end": 35.534,
+      "text": "NEVER AGAIN\u2026"
+    }
+  ],
+  "maximum_simultaneous_caption_layers": 1,
+  "transition_frames": [
+    {
+      "frame": 99,
+      "time": 3.3,
+      "caption": "We thought the corn maze\nwas scary...",
+      "opacity": 1,
+      "layers": 1
+    },
+    {
+      "frame": 100,
+      "time": 3.3333333333333335,
+      "caption": "We thought the corn maze\nwas scary...",
+      "opacity": 1,
+      "layers": 1
+    },
+    {
+      "frame": 101,
+      "time": 3.3666666666666667,
+      "caption": "We thought the corn maze\nwas scary...",
+      "opacity": 1,
+      "layers": 1
+    },
+    {
+      "frame": 102,
+      "time": 3.4,
+      "caption": null,
+      "opacity": 0,
+      "layers": 0
+    },
+    {
+      "frame": 103,
+      "time": 3.433333333333333,
+      "caption": null,
+      "opacity": 0,
+      "layers": 0
+    },
+    {
+      "frame": 104,
+      "time": 3.466666666666667,
+      "caption": null,
+      "opacity": 0,
+      "layers": 0
+    },
+    {
+      "frame": 105,
+      "time": 3.5,
+      "caption": "WE SHOULD HAVE\nTURNED BACK",
+      "opacity": 0,
+      "layers": 1
+    },
+    {
+      "frame": 106,
+      "time": 3.533333333333333,
+      "caption": "WE SHOULD HAVE\nTURNED BACK",
+      "opacity": 0.22222222222222143,
+      "layers": 1
+    },
+    {
+      "frame": 107,
+      "time": 3.566666666666667,
+      "caption": "WE SHOULD HAVE\nTURNED BACK",
+      "opacity": 0.44444444444444586,
+      "layers": 1
+    },
+    {
+      "frame": 108,
+      "time": 3.6,
+      "caption": "WE SHOULD HAVE\nTURNED BACK",
+      "opacity": 0.6666666666666673,
+      "layers": 1
+    },
+    {
+      "frame": 109,
+      "time": 3.6333333333333333,
+      "caption": "WE SHOULD HAVE\nTURNED BACK",
+      "opacity": 0.8888888888888887,
+      "layers": 1
+    },
+    {
+      "frame": 110,
+      "time": 3.6666666666666665,
+      "caption": "WE SHOULD HAVE\nTURNED BACK",
+      "opacity": 1,
+      "layers": 1
+    },
+    {
+      "frame": 111,
+      "time": 3.7,
+      "caption": "WE SHOULD HAVE\nTURNED BACK",
+      "opacity": 1,
+      "layers": 1
+    }
+  ],
+  "requested_stills": [
+    {
+      "time": 1,
+      "caption": "We thought the corn maze\nwas scary..."
+    },
+    {
+      "time": 3.3,
+      "caption": "We thought the corn maze\nwas scary..."
+    },
+    {
+      "time": 3.6,
+      "caption": "WE SHOULD HAVE\nTURNED BACK"
+    },
+    {
+      "time": 6,
+      "caption": "WE SHOULD HAVE\nTURNED BACK"
+    }
+  ],
+  "issues_fixed": [
+    "Hook burned into original footage behind replacement title; removed from a derived source copy.",
+    "Then we met the monsters. burned-in caption under first-monster title; removed from derived copy.",
+    "Caption area at 210px was inside top 12%; moved to 285px (14.84%).",
+    "Right margin increased from 70px to 120px; caption and graphic remain above bottom 20%."
+  ],
+  "retained": [
+    "Later captions and effects",
+    "v5 encoded audio, including music, voices and stings"
+  ],
+  "payoff_fade_seconds": 0.15,
+  "later_caption_resume_seconds": 6.5
+}
