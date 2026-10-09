@@ -1,0 +1,254 @@
+{
+  "detector": "Silero VAD (ONNX CPU)",
+  "package": "onnxruntime",
+  "model_source": "https://github.com/snakers4/silero-vad",
+  "model_license": "MIT",
+  "onset_probability": 0.35,
+  "offset_probability": 0.2,
+  "sample_rate": 16000,
+  "frame_ms": 32,
+  "music_in_detector": false,
+  "raw_speech_segments": [
+    [
+      1.088,
+      2.016
+    ],
+    [
+      2.336,
+      2.432
+    ],
+    [
+      2.496,
+      3.04
+    ],
+    [
+      3.104,
+      5.568
+    ],
+    [
+      5.824,
+      5.888
+    ],
+    [
+      5.92,
+      7.68
+    ],
+    [
+      9.632,
+      10.112
+    ],
+    [
+      11.104,
+      13.28
+    ],
+    [
+      13.92,
+      14.336
+    ],
+    [
+      24.672,
+      25.248
+    ],
+    [
+      26.208,
+      26.784
+    ],
+    [
+      27.648,
+      28.384
+    ],
+    [
+      34.4,
+      34.624
+    ],
+    [
+      34.976,
+      35.533
+    ]
+  ],
+  "merged_speech_segments": [
+    [
+      1.088,
+      2.016
+    ],
+    [
+      2.336,
+      5.568
+    ],
+    [
+      5.824,
+      7.68
+    ],
+    [
+      9.632,
+      10.112
+    ],
+    [
+      11.104,
+      13.28
+    ],
+    [
+      13.92,
+      14.336
+    ],
+    [
+      24.672,
+      25.248
+    ],
+    [
+      26.208,
+      26.784
+    ],
+    [
+      27.648,
+      28.384
+    ],
+    [
+      34.4,
+      34.624
+    ],
+    [
+      34.976,
+      35.533
+    ]
+  ],
+  "merge_gap_seconds": 0.25,
+  "music_duck_db": 23,
+  "attack_seconds": 0.08,
+  "release_seconds": 0.35,
+  "music_base_rms_dbfs": -25,
+  "music_fade_out_seconds": 1,
+  "music_fade_in_seconds": 0.08,
+  "foreground_input_gain_db": 0,
+  "v3_caption_ducks_removed": true,
+  "caption_accents_preserved": true,
+  "duck_events": [
+    {
+      "kind": "voice",
+      "duck_on": 1.008,
+      "full_duck": 1.088,
+      "release_start": 2.016,
+      "duck_off": 2.366
+    },
+    {
+      "kind": "voice",
+      "duck_on": 2.256,
+      "full_duck": 2.336,
+      "release_start": 5.568,
+      "duck_off": 5.918
+    },
+    {
+      "kind": "voice",
+      "duck_on": 5.744,
+      "full_duck": 5.824,
+      "release_start": 7.68,
+      "duck_off": 8.03
+    },
+    {
+      "kind": "voice",
+      "duck_on": 9.552,
+      "full_duck": 9.632,
+      "release_start": 10.112,
+      "duck_off": 10.462
+    },
+    {
+      "kind": "voice",
+      "duck_on": 11.024,
+      "full_duck": 11.104,
+      "release_start": 13.28,
+      "duck_off": 13.63
+    },
+    {
+      "kind": "voice",
+      "duck_on": 13.84,
+      "full_duck": 13.92,
+      "release_start": 14.336,
+      "duck_off": 14.686
+    },
+    {
+      "kind": "voice",
+      "duck_on": 24.592,
+      "full_duck": 24.672,
+      "release_start": 25.248,
+      "duck_off": 25.598
+    },
+    {
+      "kind": "voice",
+      "duck_on": 26.128,
+      "full_duck": 26.208,
+      "release_start": 26.784,
+      "duck_off": 27.134
+    },
+    {
+      "kind": "candy-cockroach-sting",
+      "duck_on": 26.32,
+      "full_duck": 26.4,
+      "release_start": 26.68,
+      "duck_off": 27.03
+    },
+    {
+      "kind": "voice",
+      "duck_on": 27.568,
+      "full_duck": 27.648,
+      "release_start": 28.384,
+      "duck_off": 28.734
+    },
+    {
+      "kind": "voice",
+      "duck_on": 34.32,
+      "full_duck": 34.4,
+      "release_start": 34.624,
+      "duck_off": 34.974
+    },
+    {
+      "kind": "NOPE-sting",
+      "duck_on": 34.42,
+      "full_duck": 34.5,
+      "release_start": 34.66,
+      "duck_off": 35.01
+    },
+    {
+      "kind": "voice",
+      "duck_on": 34.896,
+      "full_duck": 34.976,
+      "release_start": 35.533,
+      "duck_off": 35.533
+    }
+  ],
+  "effective_duck_on_off_intervals": [
+    [
+      1.008,
+      8.03
+    ],
+    [
+      9.552,
+      10.462
+    ],
+    [
+      11.024,
+      13.63
+    ],
+    [
+      13.84,
+      14.686
+    ],
+    [
+      24.592,
+      25.598
+    ],
+    [
+      26.128,
+      27.134
+    ],
+    [
+      27.568,
+      28.734
+    ],
+    [
+      34.32,
+      35.533
+    ]
+  ],
+  "vad_voice_seconds": 11.757,
+  "duration": 35.53333333333333
+}

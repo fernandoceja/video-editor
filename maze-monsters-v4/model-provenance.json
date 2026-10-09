@@ -1,0 +1,7 @@
+{
+  "model": "Silero VAD",
+  "license": "MIT",
+  "source": "https://raw.githubusercontent.com/snakers4/silero-vad/master/src/silero_vad/data/silero_vad.onnx",
+  "sha256": "1a153a22f4509e292a94e67d6f9b85e8deb25b4988682b7e174c65279d8788e3",
+  "failed_initial_detector": "WebRTC mode1 classified nearly whole ambient-noise clip as speech; final uses Silero"
+}
