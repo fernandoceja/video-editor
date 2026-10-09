@@ -1,0 +1,50 @@
+[
+  {
+    "time": 1.0,
+    "rms_dbfs": -16.5
+  },
+  {
+    "time": 4.1,
+    "rms_dbfs": -10.7
+  },
+  {
+    "time": 5.0,
+    "rms_dbfs": -15.0
+  },
+  {
+    "time": 5.9,
+    "rms_dbfs": -19.3
+  },
+  {
+    "time": 8.8,
+    "rms_dbfs": -18.7
+  },
+  {
+    "time": 15.0,
+    "rms_dbfs": -16.7
+  },
+  {
+    "time": 16.4,
+    "rms_dbfs": -16.6
+  },
+  {
+    "time": 17.5,
+    "rms_dbfs": -17.1
+  },
+  {
+    "time": 24.8,
+    "rms_dbfs": -14.2
+  },
+  {
+    "time": 26.4,
+    "rms_dbfs": -12.9
+  },
+  {
+    "time": 28.1,
+    "rms_dbfs": -18.4
+  },
+  {
+    "time": 34.5,
+    "rms_dbfs": -15.6
+  }
+]

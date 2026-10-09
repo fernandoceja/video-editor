@@ -1,0 +1,73 @@
+{
+  "sample_rate": 48000,
+  "channels": 2,
+  "caption_hit_times": [
+    0,
+    2,
+    6,
+    11,
+    15,
+    19,
+    24.8,
+    26.4,
+    28,
+    32.6,
+    34.8
+  ],
+  "duck_db": [
+    1,
+    2
+  ],
+  "duck_duration_seconds": 0.24,
+  "accents": [
+    {
+      "time": 19,
+      "duration": 1.4,
+      "kind": "rumble"
+    },
+    {
+      "time": 28.1,
+      "duration": 0.13,
+      "kind": "heartbeat"
+    },
+    {
+      "time": 29.1,
+      "duration": 0.13,
+      "kind": "heartbeat"
+    },
+    {
+      "time": 30.1,
+      "duration": 0.13,
+      "kind": "heartbeat"
+    },
+    {
+      "time": 31.1,
+      "duration": 0.13,
+      "kind": "heartbeat"
+    },
+    {
+      "time": 4.1,
+      "duration": 0.08,
+      "kind": "glitch"
+    },
+    {
+      "time": 8.8,
+      "duration": 0.1,
+      "kind": "bump"
+    },
+    {
+      "time": 26.4,
+      "duration": 0.28,
+      "kind": "candy-sting"
+    },
+    {
+      "time": 34.5,
+      "duration": 0.16,
+      "kind": "scare"
+    }
+  ],
+  "peak_before_safety_gain": 0.9340802638150778,
+  "peak_after": 0.9340802638150778,
+  "original_audio_preserved": true,
+  "no_external_audio_assets": true
+}

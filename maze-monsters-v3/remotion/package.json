@@ -1,0 +1,19 @@
+{
+  "name": "maze-monsters-v3",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "render": "remotion render src/index.ts MazeMonsters ../maze-monsters-v3-draft.mp4 --browser-executable=/usr/bin/chromium --concurrency=2 --codec=h264 --crf=18 --pixel-format=yuv420p",
+    "still": "remotion still src/index.ts MazeMonsters ../caption-preview.png --frame=800 --browser-executable=/usr/bin/chromium"
+  },
+  "dependencies": {
+    "remotion": "4.0.534",
+    "@remotion/cli": "4.0.534",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "@types/react": "19.2.0"
+  }
+}

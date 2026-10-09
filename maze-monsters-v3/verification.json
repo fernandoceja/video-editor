@@ -1,0 +1,71 @@
+{
+  "output": "/workspace/video-editor/maze-monsters-v3/maze-monsters-v3-draft.mp4",
+  "checks": {
+    "dimensions": true,
+    "fps": true,
+    "frames": true,
+    "audio_stream": true,
+    "decode": true,
+    "original_unchanged": true,
+    "working_copy_identical": true,
+    "reaction_audio_continuity": true,
+    "audio_not_silent": true
+  },
+  "passed": true,
+  "streams": [
+    {
+      "codec_type": "video",
+      "codec_name": "h264",
+      "width": 1080,
+      "height": 1920,
+      "r_frame_rate": "30/1",
+      "channels": null,
+      "sample_rate": null,
+      "duration": "35.533333",
+      "nb_read_frames": "1066"
+    },
+    {
+      "codec_type": "audio",
+      "codec_name": "aac",
+      "width": null,
+      "height": null,
+      "r_frame_rate": "0/0",
+      "channels": 2,
+      "sample_rate": "48000",
+      "duration": "35.541000",
+      "nb_read_frames": "1666"
+    }
+  ],
+  "format_duration": "35.541000",
+  "decode_errors": "",
+  "reaction_audio_correlations": [
+    {
+      "start": 0.25,
+      "end": 1.75,
+      "correlation": 0.9998170217701372
+    },
+    {
+      "start": 3,
+      "end": 5.5,
+      "correlation": 0.9998459176508688
+    },
+    {
+      "start": 15,
+      "end": 18.5,
+      "correlation": 0.9997180289802138
+    },
+    {
+      "start": 24.2,
+      "end": 26.2,
+      "correlation": 0.9985203166760052
+    },
+    {
+      "start": 33,
+      "end": 34.4,
+      "correlation": 0.9998867638458699
+    }
+  ],
+  "audio_peak": 0.9333856701850891,
+  "paid_actions": false,
+  "higgsfield_generation": false
+}
