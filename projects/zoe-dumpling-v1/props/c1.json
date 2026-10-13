@@ -1,0 +1,39 @@
+{
+ "video": "c1/proxy.mp4",
+ "duration": 32.5,
+ "hook": "WAIT FOR THE PURPLE ONE",
+ "chunks": [
+  {
+   "text": "TWO",
+   "start": 5.180000000000007,
+   "end": 5.82000000000001
+  },
+  {
+   "text": "PURPLE",
+   "start": 7.699999999999989,
+   "end": 8.640000000000004
+  },
+  {
+   "text": "LET'S TRY HERE",
+   "start": 13.460000000000008,
+   "end": 14.77999999999999
+  },
+  {
+   "text": "LIGHTEST",
+   "start": 22.180000000000007,
+   "end": 23.200000000000006
+  },
+  {
+   "text": "HOW FUN",
+   "start": 24.180000000000007,
+   "end": 25.74
+  }
+ ],
+ "zooms": [
+  1.8,
+  7.7,
+  22.2,
+  30.2
+ ],
+ "endCard": 2.0
+}

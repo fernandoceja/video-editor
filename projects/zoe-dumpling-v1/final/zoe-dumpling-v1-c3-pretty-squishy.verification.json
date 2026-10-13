@@ -1,0 +1,18 @@
+{
+  "file": "zoe-dumpling-v1-c3-pretty-squishy.mp4",
+  "checks": {
+    "1080x1920": true,
+    "30fps": true,
+    "stereo_aac": true,
+    "clean_decode": true,
+    "lufs_about_minus14": true,
+    "true_peak_le_minus1": true
+  },
+  "passed": true,
+  "duration_s": 36.066667,
+  "frames": 1082,
+  "integrated_lufs": -14.08,
+  "true_peak_dbtp": -1.44,
+  "audio_sample_rate": "48000",
+  "decode_errors": ""
+}

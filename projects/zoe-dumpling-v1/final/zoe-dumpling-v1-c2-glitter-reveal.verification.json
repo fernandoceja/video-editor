@@ -1,0 +1,18 @@
+{
+  "file": "zoe-dumpling-v1-c2-glitter-reveal.mp4",
+  "checks": {
+    "1080x1920": true,
+    "30fps": true,
+    "stereo_aac": true,
+    "clean_decode": true,
+    "lufs_about_minus14": true,
+    "true_peak_le_minus1": true
+  },
+  "passed": true,
+  "duration_s": 36.2,
+  "frames": 1086,
+  "integrated_lufs": -14.12,
+  "true_peak_dbtp": -1.51,
+  "audio_sample_rate": "48000",
+  "decode_errors": ""
+}

@@ -48,3 +48,19 @@ Disclosure: none of the four recommended windows mentions a gift or sponsor. Unk
 
 Free tier: $0 (local ffmpeg, Remotion, faster-whisper, synthesized SFX). No music added.
 Paid tier: none proposed. If you want stock SFX or generated shots, I will quote the exact cost per item first.
+
+## Result (rendered after approval of C1-C4, Option A loudness)
+
+Final files are in `final/`, each with a `.verification.json` from `tools/verify_final.py` (all passed):
+
+| File | Length | LUFS | True peak |
+|---|---|---|---|
+| zoe-dumpling-v1-c1-purple-reveal.mp4 | 34.5 s | -13.98 | -2.50 dBTP |
+| zoe-dumpling-v1-c2-glitter-reveal.mp4 | 36.2 s | -14.12 | -1.51 dBTP |
+| zoe-dumpling-v1-c3-pretty-squishy.mp4 | 36.1 s | -14.08 | -1.44 dBTP |
+| zoe-dumpling-v1-c4-squeeze-test-compact.mp4 | 36.0 s | -14.09 | -1.46 dBTP |
+
+The full-quality C4 (34 MB) is kept locally but not committed. The compact file is the same render re-encoded at CRF 22 with the audio copied.
+
+Reproduce: `prepare.py` (proxies, audio, SFX, captions), then `render.sh` (Remotion + loudnorm + mux). Needs the raw video in `work/batch1/raw/` and `work/batch1/transcript.json` from `tools/transcribe.py`.
+Captions come only from the local transcript, and a sentence is captioned only when every word has model confidence of at least 0.40. Spoken lines that are product claims or a relative's name are never captioned. No music.
