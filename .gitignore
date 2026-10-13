@@ -1,0 +1,7 @@
+# Raw footage, working files and secrets never go in Git
+work/
+*.env
+.env*
+node_modules/
+__pycache__/
+*.log
