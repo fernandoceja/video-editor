@@ -15,7 +15,7 @@ dest.mkdir(parents=True, exist_ok=True)
 if '/folders/' in a.url:
     files = gdown.download_folder(url=a.url, output=str(dest), quiet=False, remaining_ok=True)
 else:
-    files = [gdown.download(url=a.url, output=str(dest) + '/', quiet=False, fuzzy=True)]
+    files = [gdown.download(url=a.url, output=str(dest) + '/', quiet=False)]
 if not files or not all(files):
     sys.exit('Download failed or incomplete. Is the link shared as "Anyone with the link"?')
 for f in files:

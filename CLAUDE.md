@@ -25,7 +25,7 @@ or tokens. Never commit raw footage.
   - `maze-monsters-v4/edit-plan.md`: the timestamp-table format for edit plans.
   - Those scripts hard-code the maze-monsters frame count and hit times. Copy and adapt them into a new project folder, do not import them.
   - Note: v3 to v6 committed raw `source.mp4` and music files to Git. That is history only; the rules here forbid it going forward.
-- Environment: `python3.11`, `ffmpeg/ffprobe`, Node 22. Python venv: `python3.11 -m venv ~/.venvs/video && ~/.venvs/video/bin/pip install numpy==2.3.5 scipy==1.17.0 onnxruntime==1.31.0 gdown`.
+- Environment: `python3.11`, `ffmpeg/ffprobe`, Node 22. Python venv: `python3.11 -m venv ~/.venvs/video && ~/.venvs/video/bin/pip install numpy==2.3.5 scipy==1.17.0 onnxruntime==1.31.0 gdown==6.4.2`.
   Remotion: `npm ci` inside the project's `remotion/` folder. Remotion's free individual/small-team license is assumed; flag it if use becomes commercial at team scale.
 
 ## Workflow (follow in order)
