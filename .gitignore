@@ -5,3 +5,6 @@ work/
 node_modules/
 __pycache__/
 *.log
+
+# v2 videos stay out of git
+projects/*/final-v2/

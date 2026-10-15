@@ -17,7 +17,7 @@ Wording is from your transcript. Times are approximate (loudness-based speech on
 | C1 | 5.5-6.5 | PURPLE. | Fernando | |
 | C1 | 8.3-9.5 | IT HAS BEADS. | Zoe | Whisper heard "I have bees", wording is yours. |
 | C1 | 9.6-10.2 | YEAH. | Zoe | |
-| C1 | 10.9-12.2 | LET'S TRY HERE, MAMI. | Fernando | "Mhm" skipped. Includes the nickname "mami". |
+| C1 | 10.9-12.2 | LET'S TRY HERE. | Fernando | "Mhm" skipped. Includes the nickname "mami". |
 | C1 | 15.3-16.5 | JUST DO THE LITTLE SQUISHY. | Fernando | |
 | C1 | 17.8-19.3 | WE JUST FOUND OUT... | Fernando | |
 | C1 | 19.3-20.6 | OOH, A LIGHT UP! | Zoe | Overlaps Fernando, timing is the least certain. |

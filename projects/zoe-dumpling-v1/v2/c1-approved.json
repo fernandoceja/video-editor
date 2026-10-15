@@ -1,0 +1,28 @@
+{
+  "clip": "c1",
+  "source_start": 191.8,
+  "source_end": 222.0,
+  "hook": "WAIT FOR THE PURPLE ONE",
+  "note": "Wording supplied by the owner (not the raw transcript). MAMI dropped at the owner's request. Times are clip seconds, approximate to +/-0.4 s.",
+  "captions": [
+    {"text": "SECOND.", "start": 0.1, "end": 0.7},
+    {"text": "THREE,", "start": 2.4, "end": 2.9},
+    {"text": "TWO,", "start": 3.0, "end": 3.4},
+    {"text": "ONE!", "start": 3.5, "end": 3.9},
+    {"text": "OOH!", "start": 4.3, "end": 4.8},
+    {"text": "PURPLE.", "start": 5.5, "end": 6.5},
+    {"text": "IT HAS BEADS.", "start": 8.3, "end": 9.5},
+    {"text": "YEAH.", "start": 9.6, "end": 10.2},
+    {"text": "LET'S TRY HERE.", "start": 10.9, "end": 12.2},
+    {"text": "JUST DO THE LITTLE SQUISHY.", "start": 15.3, "end": 16.5},
+    {"text": "WE JUST FOUND OUT...", "start": 17.8, "end": 19.3},
+    {"text": "OOH, A LIGHT UP!", "start": 19.3, "end": 20.6},
+    {"text": "...THAT IT LIGHTS UP!", "start": 20.6, "end": 21.7},
+    {"text": "HOW FUN!", "start": 21.7, "end": 22.7},
+    {"text": "OOH!", "start": 24.0, "end": 25.0},
+    {"text": "AND IT'S PURPLE!", "start": 25.0, "end": 26.2},
+    {"text": "THIS ONE'S ALSO RARE!", "start": 26.6, "end": 28.0},
+    {"text": "I HAVE TWO RARE ONES, OOH!", "start": 28.0, "end": 30.2}
+  ],
+  "events": [[2.4, "pop"], [4.3, "pop"], [20.6, "squish"], [28.0, "pop"]]
+}
