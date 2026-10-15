@@ -3,30 +3,30 @@
 Times are clip seconds (0 = first frame, before the 2 s end card). Source: faster-whisper large-v3 on the cleaned, loudness-normalised
 voice track, with context words as a prompt. Any word under 0.80 confidence is listed as word(0.xx). Confidence = lowest word in the line.
 
-## C1
+## C1 (revised with your wording; new window starts at the countdown, source 191.8-222.0 s, 30.2 s)
 
-| Clip | Start-end (s) | Caption text | Confidence | Flagged words / note |
+Wording is from your transcript. Times are approximate (loudness-based speech onsets plus Whisper), accurate to about +/-0.4 s, and will be snapped to speech and checked with stills before you see the video.
+
+| Clip | Start-end (s) | Caption text | Who | Note |
 |---|---|---|---|---|
-| C1 | 0.2-0.7 | BUT YEAH, | medium | but(0.78) |
-| C1 | 0.7-1.9 | WE CAN OPEN THEM, | low | them(0.31) |
-| C1 | 1.7-3.3 | ~~SET IT,~~ | low | SKIP: SET IT: low confidence (0.41/0.76), unclear what was said |
-| C1 | 1.9-4.2 | (gap) | - | no caption: silence or non-speech |
-| C1 | 4.2-5.0 | THREE, | medium | three(0.71) |
-| C1 | 5.0-5.8 | TWO, | high | - |
-| C1 | 5.8-7.5 | (gap) | - | no caption: silence or non-speech |
-| C1 | 7.5-8.2 | PURPLE, | medium | purple(0.74) |
-| C1 | 8.2-11.5 | (gap) | - | no caption: silence or non-speech |
-| C1 | 11.5-14.4 | YEAH, IT'S RIGHT HERE, | medium | yeah(0.71), it's(0.66) |
-| C1 | 14.4-17.4 | (gap) | - | no caption: silence or non-speech |
-| C1 | 17.4-18.8 | JUST DO THE LITTLE SQUISHY, | high | - |
-| C1 | 18.8-20.5 | (gap) | - | no caption: silence or non-speech |
-| C1 | 20.5-21.6 | WE JUST FOUND OUT, | medium | out(0.52) |
-| C1 | 21.7-24.1 | IT LIGHTS UP, | low | it(0.23) |
-| C1 | 24.1-26.9 | (gap) | - | no caption: silence or non-speech |
-| C1 | 26.9-27.8 | IT'S PURPLE, | high | - |
-| C1 | 28.9-30.3 | ~~THIS ONE'S ALSO RARE,~~ | medium | SKIP: THIS ONE'S ALSO RARE: product claim, not captioned |
-| C1 | 27.8-30.4 | (gap) | - | no caption: silence or non-speech |
-| C1 | 30.4-31.5 | I HAVE TWO MORE. | low | two(0.52), more(0.14) |
+| C1 | 0.1-0.7 | SECOND. | Zoe | The model did not hear this word, so wording is yours. |
+| C1 | 2.4-2.9 | THREE, | Zoe | |
+| C1 | 3.0-3.4 | TWO, | Zoe | |
+| C1 | 3.5-3.9 | ONE! | Zoe | |
+| C1 | 4.3-4.8 | OOH! | Zoe | |
+| C1 | 5.5-6.5 | PURPLE. | Fernando | |
+| C1 | 8.3-9.5 | IT HAS BEADS. | Zoe | Whisper heard "I have bees", wording is yours. |
+| C1 | 9.6-10.2 | YEAH. | Zoe | |
+| C1 | 10.9-12.2 | LET'S TRY HERE, MAMI. | Fernando | "Mhm" skipped. Includes the nickname "mami". |
+| C1 | 15.3-16.5 | JUST DO THE LITTLE SQUISHY. | Fernando | |
+| C1 | 17.8-19.3 | WE JUST FOUND OUT... | Fernando | |
+| C1 | 19.3-20.6 | OOH, A LIGHT UP! | Zoe | Overlaps Fernando, timing is the least certain. |
+| C1 | 20.6-21.7 | ...THAT IT LIGHTS UP! | Fernando | |
+| C1 | 21.7-22.7 | HOW FUN! | Fernando | |
+| C1 | 24.0-25.0 | OOH! | Zoe | |
+| C1 | 25.0-26.2 | AND IT'S PURPLE! | Zoe | |
+| C1 | 26.6-28.0 | THIS ONE'S ALSO RARE! | Zoe | Wording supplied by you, so now captioned. |
+| C1 | 28.0-30.2 | I HAVE TWO RARE ONES, OOH! | Zoe | Wording supplied by you. |
 
 ## C3
 
