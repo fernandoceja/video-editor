@@ -40,3 +40,16 @@ Transcript: faster-whisper large-v3 (local, free). Many words are low confidence
 2. Your corrected wording for the low-confidence lines (1, 8, 9, 10 especially). Type the exact text, as you did for the last video.
 3. A Harry Potter film is playing on the TV with its own sound, which can trigger copyright claims or muted audio on TikTok and Instagram. Keep as is, or tell me how you want to handle it.
 4. Is this item part of your business, or just something you picked up? (affects whether a disclosure or sales line is needed.)
+
+## Result (rendered after "Approved" on the caption table; both lengths requested)
+
+Videos are in `final-v2/` (git-ignored). Both passed `tools/verify_final.py` (1080x1920, 30 fps, stereo AAC, clean decode):
+
+| File | Length | LUFS | True peak |
+|---|---|---|---|
+| hogwarts-express-v1-A-cut-26s.mp4 | 28.9 s | -14.02 | -3.27 dBTP |
+| hogwarts-express-v1-B-full-38s.mp4 (and -compact copy for sharing) | 38.5 s | -14.03 | -3.22 dBTP |
+
+`caption-check-a.md`: OCR check of A against the approved text, PASS. B uses the same captions and timing.
+A first draft put three-line captions below the bottom safe zone; the renderer now places full-frame captions higher and shrinks long ones, and the drafts were set aside (not delivered).
+Scripts: `prepare_v2.py <spec> <name>` then `render_v2.sh` (PROJECT=hogwarts-express-v1 PREFIX=hogwarts-express-v1).

@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""v2 of one clip from OWNER-APPROVED caption text (never the raw transcript).
-Usage (repo root): python projects/zoe-dumpling-v1/scripts/prepare_v2.py c1
-Reads projects/zoe-dumpling-v1/v2/<clip>-approved.json; writes work/zv2/<clip>/{proxy.mp4,audio_premaster.wav,props.json}.
-Same voice chain, SFX, layout inputs and end card as v1."""
+"""Prepare one clip from OWNER-APPROVED caption text (never the raw transcript).
+Usage (repo root): python projects/zoe-dumpling-v1/scripts/prepare_v2.py <approved.json> <name>
+Spec fields: source_start, source_end, hook, captions[{text,start,end}], events[[t,'pop'|'squish']], optional source (default: the Zoe MOV
+in work/batch1/raw) and layout ('letterbox' default, or 'full' for already-vertical footage).
+Writes work/zv2/<name>/{proxy.mp4,audio_premaster.wav,props.json}. Same voice chain, SFX and end card as v1."""
 import json
 import pathlib
 import subprocess
@@ -11,10 +12,10 @@ import sys
 import numpy as np
 from scipy.io import wavfile
 
-clip = sys.argv[1]
+spec_path, clip = sys.argv[1], sys.argv[2]
 SR, END_CARD = 48000, 2.0
-spec = json.load(open(f'projects/zoe-dumpling-v1/v2/{clip}-approved.json'))
-SRC = next(pathlib.Path('work/batch1/raw').glob('*.MOV'))
+spec = json.load(open(spec_path))
+SRC = pathlib.Path(spec['source']) if 'source' in spec else next(pathlib.Path('work/batch1/raw').glob('*.MOV'))
 out = pathlib.Path('work/zv2') / clip
 out.mkdir(parents=True, exist_ok=True)
 d = round(spec['source_end'] - spec['source_start'], 3)
@@ -54,6 +55,6 @@ for t, kind in spec['events']:
 wavfile.write(out / 'audio_premaster.wav', SR, (np.clip(mix, -1, 1) * 32767).astype(np.int16))
 props = dict(video=f'v2_{clip}/proxy.mp4', duration=d, hook=spec['hook'],
              chunks=[dict(text=c['text'], start=c['start'], end=c['end']) for c in spec['captions']],
-             zooms=[t for t, _ in spec['events']], endCard=END_CARD)
+             zooms=[t for t, _ in spec['events']], endCard=END_CARD, layout=spec.get('layout', 'letterbox'))
 json.dump(props, open(out / 'props.json', 'w'), indent=1)
 print(clip, 'duration', d, 'captions', len(props['chunks']))

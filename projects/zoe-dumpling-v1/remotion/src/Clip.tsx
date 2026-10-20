@@ -3,7 +3,7 @@ import { AbsoluteFill, Easing, Img, interpolate, OffthreadVideo, Sequence, sprin
 import '@fontsource/fredoka/700.css';
 
 export type Chunk = { text: string; start: number; end: number };
-export type ClipProps = { video: string; duration: number; hook: string; chunks: Chunk[]; zooms: number[]; endCard: number };
+export type ClipProps = { video: string; duration: number; hook: string; chunks: Chunk[]; zooms: number[]; endCard: number; layout?: 'letterbox' | 'full' };
 
 const W = 1080;
 const BOX_H = 608; // 1080 x 608 keeps the full 16:9 wide shot
@@ -42,7 +42,8 @@ const Pop: React.FC<{ children: React.ReactNode; start: number; end: number; col
   );
 };
 
-export const Clip: React.FC<ClipProps> = ({ video, duration, hook, chunks, zooms, endCard }) => {
+export const Clip: React.FC<ClipProps> = ({ video, duration, hook, chunks, zooms, endCard, layout = 'letterbox' }) => {
+  const full = layout === 'full'; // already-vertical footage: fill the frame, no blurred bars
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps;
@@ -52,15 +53,17 @@ export const Clip: React.FC<ClipProps> = ({ video, duration, hook, chunks, zooms
   return (
     <AbsoluteFill style={{ backgroundColor: '#000' }}>
       <Sequence from={0} durationInFrames={Math.round(duration * fps)}>
-        <AbsoluteFill style={{ overflow: 'hidden' }}>
+        {!full && <AbsoluteFill style={{ overflow: 'hidden' }}>
           <OffthreadVideo src={staticFile(video)} muted style={{ position: 'absolute', width: 1920 * (1920 / 1080) * 0.5625 * 1.0, height: 1920, left: -(1920 * (1920 / 1080) * 0.5625 - W) / 2, top: 0, objectFit: 'cover', filter: 'blur(38px) brightness(0.62) saturate(1.2)', transform: 'scale(1.15)' }} />
-        </AbsoluteFill>
-        <div style={{ position: 'absolute', left: 0, top: BOX_Y, width: W, height: BOX_H, overflow: 'hidden', boxShadow: '0 0 60px rgba(0,0,0,.5)' }}>
-          <OffthreadVideo src={staticFile(video)} muted style={{ width: W, height: BOX_H, objectFit: 'cover', transform: `scale(${z})`, transformOrigin: '45% 55%' }} />
+        </AbsoluteFill>}
+        <div style={full
+          ? { position: 'absolute', left: 0, top: 0, width: W, height: 1920, overflow: 'hidden' }
+          : { position: 'absolute', left: 0, top: BOX_Y, width: W, height: BOX_H, overflow: 'hidden', boxShadow: '0 0 60px rgba(0,0,0,.5)' }}>
+          <OffthreadVideo src={staticFile(video)} muted style={{ width: W, height: full ? 1920 : BOX_H, objectFit: 'cover', transform: `scale(${z})`, transformOrigin: full ? '50% 60%' : '45% 55%' }} />
         </div>
-        <Pop start={0.15} end={2.7} color="#FFD93B" size={112} y={250}>{hook}</Pop>
+        <Pop start={0.15} end={2.7} color="#FFD93B" size={112} y={full ? 960 : 250}>{hook}</Pop>
         {chunks.map((c, i) => (
-          <Pop key={i} start={c.start} end={c.end} color={COLORS[i % COLORS.length]} size={86} y={1330}>{c.text}</Pop>
+          <Pop key={i} start={c.start} end={c.end} color={COLORS[i % COLORS.length]} size={full && c.text.length > 26 ? 74 : 86} y={full ? 1240 : 1330}>{c.text}</Pop>
         ))}
       </Sequence>
       {fade > 0 && (

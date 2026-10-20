@@ -20,12 +20,15 @@ ap.add_argument('video')
 ap.add_argument('approved')
 ap.add_argument('--out')
 ap.add_argument('--fps', type=float, default=10)
+ap.add_argument('--layout', choices=['letterbox', 'full'], help='default: read from the approved file')
 a = ap.parse_args()
 spec = json.load(open(a.approved))
 approved = spec['captions']
 norm = lambda s: re.sub(r"[^A-Z0-9' ]", ' ', s.upper().replace('’', "'")).split()
 ocr = RapidOCR()
-BANDS = {'caption': (1290, 280), 'hook': (200, 420)}  # y, height
+layout = a.layout or spec.get('layout', 'letterbox')
+# y, height of the strips that are OCR'd (must match where the renderer draws them)
+BANDS = {'caption': (1220, 330), 'hook': (900, 340)} if layout == 'full' else {'caption': (1290, 280), 'hook': (200, 420)}
 
 
 def read(img):
@@ -73,13 +76,17 @@ for c in approved:
         res = 'DIFF: ' + ', '.join(diff)
         bad.append(res)
     rows.append(f"| {c['start']:.1f}-{c['end']:.1f} | {got} | {' '.join(want)} | {res} |")
-extra = [x for x in frames['caption'] if x[1] and not active(x[0], 0.2)]
+# stray text must be 3+ letters and seen in 2+ consecutive samples, so OCR speckle on a busy background is not reported
+stray = [x for x in frames['caption'] if len(letters(x[1])) >= 3 and not active(x[0], 0.2)]
+extra = [x for k, x in enumerate(stray) if k + 1 < len(stray) and abs(stray[k + 1][0] - x[0] - 1 / a.fps) < 1e-6 or k > 0 and abs(x[0] - stray[k - 1][0] - 1 / a.fps) < 1e-6]
 for t, txt, _ in extra:
     rows.append(f"| {t:.1f} | {txt} | (no caption approved here) | UNAPPROVED TEXT ON SCREEN |")
     bad.append('unapproved: ' + txt)
 hk = [x[1] for x in frames['hook'] if x[1]] + [x[2] for x in frames['hook'] if x[2]]
 hook_ok = any(letters(x) == letters(' '.join(norm(spec['hook']))) for x in hk)
-rows.append(f"| hook | {max(set(hk), key=hk.count) if hk else ''} | {' '.join(norm(spec['hook']))} | {'OK' if hook_ok else 'DIFF'} |")
+want_hook = ' '.join(norm(spec['hook']))
+shown = want_hook if hook_ok else (max(set(hk), key=hk.count) if hk else '')  # when it matched, show the matching reading (not the end-card logo text)
+rows.append(f"| hook | {shown} | {want_hook} | {'OK' if hook_ok else 'DIFF'} |")
 if not hook_ok:
     bad.append('hook differs')
 rep = '\n'.join(['# Caption check (OCR of the rendered video vs approved text)', '', *rows, '',
