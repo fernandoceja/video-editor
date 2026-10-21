@@ -8,3 +8,4 @@ __pycache__/
 
 # v2 videos stay out of git
 projects/*/final-v2/
+projects/*/final/*.mp4
