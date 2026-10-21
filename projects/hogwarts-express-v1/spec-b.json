@@ -1,0 +1,75 @@
+{
+ "source": "work/batch2/raw/Hogwarts-Express.mov",
+ "source_start": 0.0,
+ "hook": "WATCH THE STEAM!",
+ "layout": "full",
+ "note": "Wording approved by the owner (reply 'Approved' to the table in edit-plan.md). Store/location, availability and 'Thank you Nanda' lines are never captioned.",
+ "captions": [
+  {
+   "text": "SO WE GOT OURSELVES",
+   "start": 0.1,
+   "end": 2.1
+  },
+  {
+   "text": "THE HOGWARTS EXPRESS",
+   "start": 4.0,
+   "end": 5.8
+  },
+  {
+   "text": "POPCORN BUCKET",
+   "start": 5.8,
+   "end": 7.1
+  },
+  {
+   "text": "AND IT TOOK A COUPLE OF TRIES",
+   "start": 7.2,
+   "end": 9.2
+  },
+  {
+   "text": "BUT WE GOT A LITTLE BIT OF WATER IN THERE.",
+   "start": 9.3,
+   "end": 11.7
+  },
+  {
+   "text": "YOU SEE THE STEAM COMING OUT.",
+   "start": 11.8,
+   "end": 13.7
+  },
+  {
+   "text": "WE DON'T HAVE ANY POPCORN IN IT YET,",
+   "start": 14.1,
+   "end": 16.0
+  },
+  {
+   "text": "BUT WE CAN HAVE A LITTLE FUN WITH THAT.",
+   "start": 16.0,
+   "end": 19.5
+  },
+  {
+   "text": "OH, THERE IT IS.",
+   "start": 19.9,
+   "end": 22.9
+  },
+  {
+   "text": "CLOSE, CLOSE ENOUGH, RIGHT?",
+   "start": 24.8,
+   "end": 26.5
+  }
+ ],
+ "events": [
+  [
+   12.4,
+   "squish"
+  ],
+  [
+   22.0,
+   "pop"
+  ],
+  [
+   25.0,
+   "pop"
+  ]
+ ],
+ "source_end": 36.5,
+ "option": "B: full length"
+}

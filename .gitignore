@@ -1,0 +1,11 @@
+# Raw footage, working files and secrets never go in Git
+work/
+*.env
+.env*
+node_modules/
+__pycache__/
+*.log
+
+# v2 videos stay out of git
+projects/*/final-v2/
+projects/*/final/*.mp4

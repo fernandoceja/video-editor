@@ -1,0 +1,18 @@
+{
+  "file": "zoe-dumpling-v2-c1-purple-reveal.mp4",
+  "checks": {
+    "1080x1920": true,
+    "30fps": true,
+    "stereo_aac": true,
+    "clean_decode": true,
+    "lufs_about_minus14": true,
+    "true_peak_le_minus1": true
+  },
+  "passed": true,
+  "duration_s": 32.2,
+  "frames": 966,
+  "integrated_lufs": -14.02,
+  "true_peak_dbtp": -2.85,
+  "audio_sample_rate": "48000",
+  "decode_errors": ""
+}
