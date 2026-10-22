@@ -26,3 +26,7 @@ Not verified: playback.
 Same cuts, captions and effects as before. render_v2.py now takes the original MOV as a third argument and mixes its audio at unity under the synthesized SFX; render.py (glove) no longer lowers the original by 12 dB. Limiter ceiling -1 dBFS.
 Outputs: Infinity-Gauntlet-short-v3.mp4 (Endgame clip, caption 3), Infinity-Gauntlet-glove-short-v2.mp4 (glove clip, caption 2), plus under-30MB copies. Video files not committed.
 Copyright: v3 now carries the TV's Endgame dialogue/music at original level, so audio and visuals may be flagged or muted.
+
+## v4 (2026-10-22): Endgame v3 audio raised to about -14 LUFS
+scripts/loud_v4.sh: gentle compressor + 21 dB gain + limiter (ceiling about -3 dBFS). Result -14.04 LUFS, true peak -1.83 dBTP, video unchanged. The recording was quiet, so room noise and the TV are louder too.
+Copyright: audio is loud and includes the TV's movie audio.
