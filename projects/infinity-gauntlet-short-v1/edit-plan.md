@@ -30,3 +30,9 @@ Copyright: v3 now carries the TV's Endgame dialogue/music at original level, so 
 ## v4 (2026-10-22): Endgame v3 audio raised to about -14 LUFS
 scripts/loud_v4.sh: gentle compressor + 21 dB gain + limiter (ceiling about -3 dBFS). Result -14.04 LUFS, true peak -1.83 dBTP, video unchanged. The recording was quiet, so room noise and the TV are louder too.
 Copyright: audio is loud and includes the TV's movie audio.
+
+## Re-cut (2026-10-22): Fernando's exact segment order, original audio, about -14 LUFS
+Source 1:36 MOV. Long (40.2s): 0:02-0:08, 0:22-0:25, 0:30-0:38, 0:48-0:52, 0:59-1:01, 1:05-1:09.4 + 1:15.2-1:24 (silent wait before the snap cut from about 8.9s to about 3s; reaction at 1:19-1:20 kept, so cut 6 runs straight into cut 7), 1:29-1:31, 2s logo card.
+Short (22.7s): 0:22-0:25, 0:33-0:38, 0:48-0:52, 1:05-1:09.4 + 1:15.2-1:20, 1.5s logo card.
+Caption 3 on screen over the stones/ending; "Snap!" text on the TV snap flash; zoom punches; two light pops (long) / one (short). Synthesized snap SFX dropped (the real snap is in the original audio).
+Scripts: render_cut.py (long|short), loud_cut.py (compressor + gain + limiter). Video files not committed.
