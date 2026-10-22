@@ -36,3 +36,6 @@ Source 1:36 MOV. Long (40.2s): 0:02-0:08, 0:22-0:25, 0:30-0:38, 0:48-0:52, 0:59-
 Short (22.7s): 0:22-0:25, 0:33-0:38, 0:48-0:52, 1:05-1:09.4 + 1:15.2-1:20, 1.5s logo card.
 Caption 3 on screen over the stones/ending; "Snap!" text on the TV snap flash; zoom punches; two light pops (long) / one (short). Synthesized snap SFX dropped (the real snap is in the original audio).
 Scripts: render_cut.py (long|short), loud_cut.py (compressor + gain + limiter). Video files not committed.
+
+## Re-cut v2 (2026-10-22): finish the sentence
+Cut 7 ended at 1:24 mid-sentence (speech runs 1:23.8-1:28.9, then a 1 s pause). Long now plays 1:15.2-1:29.0 continuously, then 1:29-1:31 as listed: 45.2s incl. 2s logo card. Short: cut 6 ends 1:20.3 instead of 1:20.0 so the reaction is not clipped: 23.0s incl. 1.5s card. Caption 3 now shows for the last 6 s of the long. Audio -14 LUFS again.
