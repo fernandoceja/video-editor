@@ -15,3 +15,9 @@ Stabilized with vidstab (smoothing 20), cropped 608x1080 -> 1080x1920. Original 
 Deliberate: integrated loudness about -30 LUFS (fails the usual -14 LUFS check) so a trending sound can be added on top. Peak -3.8 dBTP.
 Not verified: playback timing, audio content (not transcribed).
 Render: python3.11 scripts/render.py <stabilized.mp4> <out.mp4>. Video files are not committed.
+
+## v2 (popcorn-bucket MOV, 95.9s HEVC; caption 3 and muted original audio approved 2026-10-22)
+Cut list: 76.0-79.0 (TV snap + flash, "Snap!"), 24.5-27.5 (gauntlet on shelf), 38.5-46.5 (pick-up), 46.5-54.5 (turn to camera), 84.0-90.0 (stones glowing + caption 3), 2s logo end card. 30.0s.
+Pipeline: MOV -> constant 30 fps h264 (needed: stabilizing the HEVC directly gave blocky frames) -> vidstab -> scripts/render_v2.py. Original audio dropped; only synthesized snap/pop SFX.
+Copyright: Endgame footage is visible on the TV (visuals may be flagged); no TV audio in the file.
+Not verified: playback.
