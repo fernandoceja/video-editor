@@ -39,7 +39,7 @@ f.append(f"[bk][lg]overlay=(W-w)/2:(H-h)/2-80:shortest=1,format=yuv420p[ve]")
 f.append(f"[vb]format=yuv420p[vb2]")
 f.append(f"[vb2][ve]concat=n=2:v=1:a=0[vout]")
 # audio: original low (-12 dB), snap + pops synthesized, end card silence
-f.append(f"[ac]volume=-12dB[al]")
+f.append(f"[ac]volume=0dB[al]")
 f.append("anoisesrc=d=0.18:c=white:a=0.9:r=48000,highpass=f=2500,afade=t=out:st=0.02:d=0.16,volume=0.3[sn1]")
 f.append("aevalsrc='0.4*sin(2*PI*180*t)*exp(-t*90)':d=0.06:s=48000[sn2]")
 f.append("[sn1][sn2]amix=inputs=2:normalize=0,aformat=channel_layouts=stereo[snap]")
@@ -55,7 +55,7 @@ for i, p in enumerate(pops):
     f.append(f"[p{i}]adelay={ms}|{ms}[pd{i}]")
     labels.append(f"[pd{i}]")
 f.append(f"[al]aformat=channel_layouts=stereo{''.join(labels) and ''}[alst]")
-f.append(f"[alst]{''.join(labels)}amix=inputs={1+len(labels)}:normalize=0:duration=first,apad=whole_dur={body+END},alimiter=limit=0.7[aout]")
+f.append(f"[alst]{''.join(labels)}amix=inputs={1+len(labels)}:normalize=0:duration=first,apad=whole_dur={body+END},alimiter=limit=0.89[aout]")
 cmd = ['ffmpeg', '-v', 'error', '-y', '-i', SRC, '-loop', '1', '-t', str(END), '-i', LOGO,
        '-filter_complex', ';'.join(f), '-map', '[vout]', '-map', '[aout]', '-t', str(body + END),
        '-c:v', 'libx264', '-crf', '17', '-preset', 'slow', '-pix_fmt', 'yuv420p', '-r', '30',

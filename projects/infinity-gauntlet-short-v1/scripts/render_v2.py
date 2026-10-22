@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Infinity-Gauntlet-short-v2 from the popcorn-bucket MOV (gauntlet + Endgame TV).
-Usage: render_v2.py stabilized_video_only.mp4 out.mp4
-Original audio is NOT used (muted by request, avoids TV movie audio). Audio = synthesized snap/pop SFX only."""
+Usage: render_v2.py stabilized_video_only.mp4 out.mp4 original.mov
+Original audio at normal level (unity) + synthesized snap/pop SFX. (v2 muted it; v3 restores it by request.)"""
 import subprocess, sys
 
-SRC, OUT = sys.argv[1], sys.argv[2]
+SRC, OUT, ORIG = sys.argv[1], sys.argv[2], sys.argv[3]
 LOGO = 'projects/infinity-gauntlet-short-v1/assets/logo-80s-obsession.png'
 FONT = '/usr/share/fonts/opentype/inter/InterDisplay-Bold.otf'
 # (src_start, src_end, crop_x_start, crop_x_end) in the 1920-wide frame; 608x1080 strip, panned linearly
@@ -25,6 +25,9 @@ for i, (s, e, xa, xb) in enumerate(SEGS):
     d = e - s
     f.append(f"[0:v]trim={s}:{e},setpts=PTS-STARTPTS,crop=608:1080:'{xa}+({xb}-{xa})*t/{d}':0,"
              f"scale=1080:1920:flags=lanczos,setsar=1,fps=30[v{i}]")
+for i, (s, e, xa, xb) in enumerate(SEGS):
+    f.append(f"[2:a:0]atrim={s}:{e},asetpts=PTS-STARTPTS,aresample=48000,aformat=channel_layouts=stereo[oa{i}]")
+f.append(''.join(f'[oa{i}]' for i in range(len(SEGS))) + f"concat=n={len(SEGS)}:v=0:a=1[oac]")
 f.append(''.join(f'[v{i}]' for i in range(len(SEGS))) + f"concat=n={len(SEGS)}:v=1:a=0[vc]")
 f.append(f"[vc]scale=w='trunc(1080*(1+{z})/2)*2':h='trunc(1920*(1+{z})/2)*2':eval=frame,crop=1080:1920,setsar=1[vz]")
 f.append(f"[vz]drawtext=fontfile={FONT}:text='Snap!':fontsize=190:fontcolor=white:borderw=10:bordercolor=black:"
@@ -49,9 +52,9 @@ for i, p in enumerate(POPS):
     ms = int(p * 1000)
     f.append(f"[p{i}]adelay={ms}|{ms}[pd{i}]")
     labs.append(f'[pd{i}]')
-f.append(f"anullsrc=r=48000:cl=stereo:d={body+END}[sil]")
-f.append(f"[sil]{''.join(labs)}amix=inputs={1+len(labs)}:normalize=0:duration=first,alimiter=limit=0.7[aout]")
-cmd = ['ffmpeg', '-v', 'error', '-y', '-i', SRC, '-loop', '1', '-t', str(END), '-i', LOGO,
+f.append(f"[oac]apad=whole_dur={body+END}[sil]")
+f.append(f"[sil]{''.join(labs)}amix=inputs={1+len(labs)}:normalize=0:duration=first,alimiter=limit=0.89[aout]")
+cmd = ['ffmpeg', '-v', 'error', '-y', '-i', SRC, '-loop', '1', '-t', str(END), '-i', LOGO, '-i', ORIG,
        '-filter_complex', ';'.join(f), '-map', '[vout]', '-map', '[aout]', '-t', str(body + END),
        '-c:v', 'libx264', '-crf', '17', '-preset', 'slow', '-pix_fmt', 'yuv420p', '-r', '30',
        '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-ac', '2', '-movflags', '+faststart', OUT]

@@ -21,3 +21,8 @@ Cut list: 76.0-79.0 (TV snap + flash, "Snap!"), 24.5-27.5 (gauntlet on shelf), 3
 Pipeline: MOV -> constant 30 fps h264 (needed: stabilizing the HEVC directly gave blocky frames) -> vidstab -> scripts/render_v2.py. Original audio dropped; only synthesized snap/pop SFX.
 Copyright: Endgame footage is visible on the TV (visuals may be flagged); no TV audio in the file.
 Not verified: playback.
+
+## v3 / glove v2 (2026-10-22): original audio restored at normal level by request
+Same cuts, captions and effects as before. render_v2.py now takes the original MOV as a third argument and mixes its audio at unity under the synthesized SFX; render.py (glove) no longer lowers the original by 12 dB. Limiter ceiling -1 dBFS.
+Outputs: Infinity-Gauntlet-short-v3.mp4 (Endgame clip, caption 3), Infinity-Gauntlet-glove-short-v2.mp4 (glove clip, caption 2), plus under-30MB copies. Video files not committed.
+Copyright: v3 now carries the TV's Endgame dialogue/music at original level, so audio and visuals may be flagged or muted.
