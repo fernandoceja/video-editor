@@ -1,0 +1,70 @@
+{
+  "shots": [
+    {
+      "source": "Inside-Infernal-Coffee.MOV",
+      "kind": "video",
+      "start": 20,
+      "seconds": 3,
+      "caption": "A HORROR-THEMED COFFEE SHOP?"
+    },
+    {
+      "source": "Inside-Infernal-Coffee.MOV",
+      "kind": "video",
+      "start": 1,
+      "seconds": 5,
+      "caption": "INFERNAL COFFEE · FONTANA"
+    },
+    {
+      "source": "Inside-Internal-coffee part 2.MOV",
+      "kind": "video",
+      "start": 6,
+      "seconds": 4,
+      "caption": "THE DETAILS ARE EVERYTHING"
+    },
+    {
+      "source": "Inside-Internal-Coffee part 3.MOV",
+      "kind": "video",
+      "start": 2,
+      "seconds": 4,
+      "caption": "HORROR FANS, LOOK AROUND"
+    },
+    {
+      "source": "Jason Vorhees Banana Horchata latte .HEIC",
+      "kind": "image",
+      "seconds": 4,
+      "caption": "THE DRINKS DESERVE A CLOSE-UP"
+    },
+    {
+      "source": "Cyndi’s Freedy Kreuger Red Velvet Latte.HEIC",
+      "kind": "image",
+      "seconds": 4,
+      "caption": "AND THIS ONE? SO FUN"
+    },
+    {
+      "source": "Cyndi about to enjoy Kreuger Latte.MOV",
+      "kind": "video",
+      "start": 0,
+      "seconds": 1.5,
+      "caption": "A LITTLE TASTE TEST"
+    },
+    {
+      "source": "Silly Cyndi with Kreuger Latte.HEIC",
+      "kind": "image",
+      "seconds": 4,
+      "caption": "WE LOVED OUR VISIT"
+    },
+    {
+      "source": "Chucky and Tiff Strawberry dessert.HEIC",
+      "kind": "image",
+      "seconds": 4,
+      "caption": "DON’T SKIP THE DESSERT"
+    },
+    {
+      "source": "Inside-Infernal-Coffee.MOV",
+      "kind": "video",
+      "start": 23,
+      "seconds": 4,
+      "caption": "FOLLOW FOR MORE LOCAL FINDS\n@80s.obsession.company · TikTok\n@80sobsessioncompany · Instagram"
+    }
+  ]
+}
