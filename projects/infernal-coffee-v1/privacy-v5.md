@@ -18,3 +18,5 @@ Reviewed source start, midpoint, and last in-segment frame (end minus 1/30 s) fo
 The edge at the opening shot is a hanging horror prop; an extra source-context still at 20.3 s confirms this. Signage wide view includes Fernando holding both drinks, as described by the owner. Neither Cynthia's face nor body appears in these reviewed frames. Hands holding drinks are permitted. Sampled frames do not constitute a review of every video frame.
 
 Proof images remain local under `work/infernal-coffee-v5/privacy-v5/` to avoid committing source footage frames. New signage photo converted upright to JPG (2142×2856) and analyzed locally; no duration or audio is meaningful for a still image.
+
+Encoded v5 follow-up: reviewed start/mid/end samples for all ten segments including the logo fade/card under `work/infernal-coffee-v5/encoded-proofs/`. Correct caption wording, upright picture, intended photo crops and logo/handle display visible. Cynthia absent from all reviewed samples. Technical verification passed; full motion/audio playback remains for owner review.

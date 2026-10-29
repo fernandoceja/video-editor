@@ -1,0 +1,18 @@
+{
+  "file": "infernal-coffee-v1-v5.mp4",
+  "checks": {
+    "1080x1920": true,
+    "30fps": true,
+    "stereo_aac": true,
+    "clean_decode": true,
+    "lufs_about_minus14": true,
+    "true_peak_le_minus1": true
+  },
+  "passed": true,
+  "duration_s": 38.5,
+  "frames": 1155,
+  "integrated_lufs": -14.23,
+  "true_peak_dbtp": -2.07,
+  "audio_sample_rate": "48000",
+  "decode_errors": ""
+}

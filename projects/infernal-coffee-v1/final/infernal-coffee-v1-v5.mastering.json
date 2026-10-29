@@ -1,0 +1,27 @@
+{
+  "stage2": {
+    "input_i": "-14.58",
+    "input_tp": "-2.87",
+    "input_lra": "3.50",
+    "input_thresh": "-24.71",
+    "output_i": "-14.15",
+    "output_tp": "-2.90",
+    "output_lra": "2.00",
+    "output_thresh": "-24.22",
+    "normalization_type": "dynamic",
+    "target_offset": "0.15"
+  },
+  "trim_gain_db": 0.3700000000000001,
+  "post_trim": {
+    "input_i": "-14.21",
+    "input_tp": "-2.50",
+    "input_lra": "3.50",
+    "input_thresh": "-24.34",
+    "output_i": "-14.15",
+    "output_tp": "-2.90",
+    "output_lra": "2.00",
+    "output_thresh": "-24.22",
+    "normalization_type": "dynamic",
+    "target_offset": "0.15"
+  }
+}

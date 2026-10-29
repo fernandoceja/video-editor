@@ -1,0 +1,14 @@
+{
+  "file": "infernal-coffee-v1-v5.mp4",
+  "review_file": "infernal-coffee-v1-v5-REVIEW.mp4",
+  "size_bytes": 46311197,
+  "sha256": "85e72dd23dd9f4d211532b43d48a135cdc472a8484cbd25047060c9001dc1811",
+  "duration_seconds": 38.5,
+  "review_repo": "fernandoceja/video-review-scratch",
+  "review_commit": "5c1b2a943b7192af2577f8b461dee131168d6711",
+  "copy_size_and_hash_verified_before_push": true,
+  "encoded_start_mid_end_frames_reviewed": true,
+  "cynthia_visible_in_reviewed_frames": false,
+  "full_audio_playback_reviewed_by_assistant": false,
+  "posting_status": "Awaiting owner review; not posted"
+}
