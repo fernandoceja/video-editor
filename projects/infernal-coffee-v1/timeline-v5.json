@@ -1,0 +1,80 @@
+{
+  "shots": [
+    {
+      "source": "Inside-Infernal-Coffee.MOV",
+      "kind": "video",
+      "start": 20,
+      "seconds": 3,
+      "caption": "A HORROR-THEMED COFFEE SHOP?"
+    },
+    {
+      "source": "Inside-Infernal-Coffee.MOV",
+      "kind": "video",
+      "start": 1,
+      "seconds": 5,
+      "caption": "INFERNAL COFFEE · FONTANA"
+    },
+    {
+      "source": "Inside-Internal-coffee part 2.MOV",
+      "kind": "video",
+      "start": 6,
+      "seconds": 4,
+      "caption": "THE DETAILS ARE EVERYTHING"
+    },
+    {
+      "source": "Inside-Internal-Coffee part 3.MOV",
+      "kind": "video",
+      "start": 2,
+      "seconds": 4,
+      "caption": "HORROR FANS, LOOK AROUND"
+    },
+    {
+      "source": "Jason Vorhees Banana Horchata latte .HEIC",
+      "kind": "image",
+      "seconds": 4,
+      "caption": "THE DRINKS DESERVE A CLOSE-UP"
+    },
+    {
+      "source": "Kreuger&Jason Latte w_Infernal Coffee signage_1322.HEIC",
+      "kind": "image",
+      "seconds": 4,
+      "caption": "AND THIS ONE? SO FUN",
+      "sourceRoot": "work/infernal-coffee-v5/raw",
+      "crop": [
+        650,
+        1450,
+        850,
+        1400
+      ]
+    },
+    {
+      "source": "Kreuger&Jason Latte w_Infernal Coffee signage_1322.HEIC",
+      "sourceRoot": "work/infernal-coffee-v5/raw",
+      "kind": "image",
+      "seconds": 4,
+      "caption": "WE LOVED OUR VISIT",
+      "fit": "contain",
+      "zoomBase": 0.9,
+      "anchor": "45% 50%"
+    },
+    {
+      "source": "Chucky and Tiff Strawberry dessert.HEIC",
+      "kind": "image",
+      "seconds": 4,
+      "caption": "DON’T SKIP THE DESSERT"
+    },
+    {
+      "source": "Inside-Infernal-Coffee.MOV",
+      "kind": "video",
+      "start": 23,
+      "seconds": 4,
+      "caption": "FOLLOW FOR MORE LOCAL FINDS\n@80s.obsession.company · TikTok\n@80sobsessioncompany · Instagram"
+    },
+    {
+      "source": "projects/_brand/logo-80s-obsession-company.png",
+      "kind": "logo",
+      "seconds": 2.5,
+      "caption": ""
+    }
+  ]
+}
